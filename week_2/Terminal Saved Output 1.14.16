@@ -1,0 +1,157 @@
+Last login: Thu Jan 14 17:57:32 on console
+Linxis-MacBook-Pro:~ linxic$ cd desktop
+Linxis-MacBook-Pro:desktop linxic$ cd part-time
+Linxis-MacBook-Pro:part-time linxic$ ls
+week1.rb	week1_lab.rb	week_2
+Linxis-MacBook-Pro:part-time linxic$ ruby week1_lab.rb
+Enter a verb
+run 
+Enter a noun
+ruby week1_lab.rb
+Enter an adjective
+fun
+Enter another adjective
+test
+Enter another noun
+test
+I would like a ruby week1_lab.rb as soon as possible. It would be great to be able to run all day tomorrow in the test. I feel very fun and test.
+Linxis-MacBook-Pro:part-time linxic$ ruby week1_lab.rb
+Enter a verb
+test
+Enter a noun
+test
+Enter an adjective
+test
+Enter another adjective
+test
+Enter another noun
+test
+I would like a test as soon as possible. It would be great to be able to test all day tomorrow in the test. I feel very test and test.
+Linxis-MacBook-Pro:part-time linxic$ ruby week1_lab.rb
+7.222222222222222
+Linxis-MacBook-Pro:part-time linxic$ ruby week1_lab.rb
+7.222222222222222
+Linxis-MacBook-Pro:part-time linxic$ ruby week1_lab.rb
+7.222222222222222
+Linxis-MacBook-Pro:part-time linxic$ 
+  [Restored Jan 14, 2016, 6:50:52 PM]
+Last login: Thu Jan 14 18:50:29 on console
+Linxis-MacBook-Pro:part-time linxic$ ruby week1_lab.rb
+Enter the fahrenheit temperature: 
+45
+Your temperature in Celsius is (((usertemp - 32.0) / 9.0) * 5.0).round
+Linxis-MacBook-Pro:part-time linxic$ irb
+2.3.0 :001 > 33 == 32
+ => false 
+2.3.0 :002 > 33 == 33
+ => true 
+2.3.0 :003 > 33 >= 32
+ => true 
+2.3.0 :004 > 33 > 32
+ => true 
+2.3.0 :005 > 32 < 40
+ => true 
+2.3.0 :006 > 33 != 33
+ => false 
+2.3.0 :007 > exit
+Linxis-MacBook-Pro:part-time linxic$ ls
+week1.rb	week1_lab.rb	week_2
+Linxis-MacBook-Pro:part-time linxic$ week_2
+-bash: week_2: command not found
+Linxis-MacBook-Pro:part-time linxic$ cd week_2
+Linxis-MacBook-Pro:week_2 linxic$ ruby week2.rb
+What's your name?
+Emily
+Never heard of it!
+Linxis-MacBook-Pro:week_2 linxic$ ruby week2.rb
+What's your name?
+joe
+Boring! Very common name
+Linxis-MacBook-Pro:week_2 linxic$ ruby week2.rb
+What's your name?
+joe
+Never heard of it!
+Linxis-MacBook-Pro:week_2 linxic$ ruby week2.rb
+What's your name?
+emily
+week2.rb:25:in `<main>': undefined local variable or method `greeter' for main:Object (NameError)
+Linxis-MacBook-Pro:week_2 linxic$ ruby week2.rb
+week2.rb:25: syntax error, unexpected end-of-input, expecting keyword_end
+Linxis-MacBook-Pro:week_2 linxic$ ruby week2.rb
+week2.rb:41: syntax error, unexpected end-of-input, expecting keyword_end
+Linxis-MacBook-Pro:week_2 linxic$ ruby week2.rb
+week2.rb:41: syntax error, unexpected end-of-input, expecting keyword_end
+Linxis-MacBook-Pro:week_2 linxic$ ruby week2.rb
+What's your name?
+Emily
+Never heard of that name before
+Linxis-MacBook-Pro:week_2 linxic$ ruby week2.rb
+What's your name?
+Joe
+BORING!
+Linxis-MacBook-Pro:week_2 linxic$ ruby week2.rb
+What's your name?
+Emily
+Never heard of that name before
+Linxis-MacBook-Pro:week_2 linxic$ ruby week2.rb
+What's your name?
+Emily
+That's pretty common
+Linxis-MacBook-Pro:week_2 linxic$ ruby week2.rb
+What's your name?
+Joe
+BORING!
+week2.rb:41:in `<main>': undefined local variable or method `name' for main:Object (NameError)
+Linxis-MacBook-Pro:week_2 linxic$ ruby week2.rb
+week2.rb:41:in `<main>': undefined local variable or method `name' for main:Object (NameError)
+Linxis-MacBook-Pro:week_2 linxic$ ruby week2.rb
+What's your name?
+Emily
+Great name
+Linxis-MacBook-Pro:week_2 linxic$ ruby week2.rb
+What's your name?
+joe
+Linxis-MacBook-Pro:week_2 linxic$ ruby week2.rb
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+Linxis-MacBook-Pro:week_2 linxic$ ruby week2.rb
+There are still 7 days left in the week
+There are still 6 days left in the week
+There are still 5 days left in the week
+There are still 4 days left in the week
+There are still 3 days left in the week
+There are still 2 days left in the week
+There are still 1 days left in the week
+Linxis-MacBook-Pro:week_2 linxic$ ruby week2.rb
+You’re a traveler on a long journey. After many miles, you come to a fork in the road. To the North is a small village.  To the East is dark cave. Which way do you go? North or East?
+North
+You are in a small village
+Linxis-MacBook-Pro:week_2 linxic$ ruby week2.rb
+You’re a traveler on a long journey. After many miles, you come to a fork in the road. To the North is a small village.  To the East is dark cave. Which way do you go? North or East?
+north
+You are in a small village
+Linxis-MacBook-Pro:week_2 linxic$ ruby week2.rb
+You’re a traveler on a long journey. After many miles, you come to a fork in the road. To the North is a small village.  To the East is dark cave. Which way do you go? North or East?
+east
+You are in a dark cave
+Linxis-MacBook-Pro:week_2 linxic$ ruby week2.rb
+You’re a traveler on a long journey. After many miles, you come to a fork in the road. To the North is a small village.  To the East is dark cave. Which way do you go? North or East?
+south
+I have no idea where you are
+Linxis-MacBook-Pro:week_2 linxic$ ruby week2.rb
+Linxis-MacBook-Pro:week_2 linxic$ ruby week2.rb
+Linxis-MacBook-Pro:week_2 linxic$ ruby week2.rb
+The engine is off
+Linxis-MacBook-Pro:week_2 linxic$ ruby week2.rb
+week2.rb:112:in `<main>': undefined local variable or method `engine_on' for main:Object (NameError)
+Linxis-MacBook-Pro:week_2 linxic$ ruby week2.rb
+The engine is off
+Linxis-MacBook-Pro:week_2 linxic$ 
