@@ -43,15 +43,15 @@
 
 # Write a program which will ask for a starting year and an ending year, and then puts all of the leap years between them (and including them, if they are also leap years). 
 
-def leapyear
-	puts "Tell me a starting year"
-	starting_year=gets.chomp
-	puts "Tell me an ending year"
-	ending_year=gets.chomp
-	(starting_year..ending_year).each do |year|
-		puts year
-	end
-end
+# def leapyear
+# 	puts "Tell me a starting year"
+# 	starting_year=gets.chomp
+# 	puts "Tell me an ending year"
+# 	ending_year=gets.chomp
+# 	(starting_year..ending_year).each do |year|
+# 		puts year
+# 	end
+# end
 
 #leapyear
 
@@ -72,7 +72,7 @@ while starting_year <= ending_year
 end
 end
 
-leapyear_1
+# leapyear_1
 
 # def leapyear2
 # 	puts "Tell me a starting year"
@@ -85,6 +85,12 @@ leapyear_1
 # end
 
 # leapyear2
+
+# numbers=[1,2,3,4,5,6,7,8,9,10]
+
+# numbers.select do |number|
+# 	puts number.even?
+# end
 		
 
 
