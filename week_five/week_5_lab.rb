@@ -1,10 +1,10 @@
-# bank account program Week 5
+# bank account -- Week 5
 class Account
 	attr_reader :name, :balance
 
 	def initalize (name, balance)
 		@name = name
-		@balance = balance
+		@balance = balance.to_i
 		puts "Welcome #{name}!"
 	end
 
@@ -14,6 +14,7 @@ class Account
 			if pin_number == pin
 				puts "What is the amount you would like to withdraw?"
 				amount = gets.chomp.to_i
+				@balance = 1000
 				if amount < @balance
 					puts "Here is $#{amount}. Your new balance is #{@balance - amount}."
 				else 
@@ -30,8 +31,11 @@ class Account
 		end
 	end
 
-	checking = Account.new("Emily", 1000)
+	checking = Account.new
 	checking.withdraw(1111, 100)
+
+
+#Draft 2
 
 # class Account
 # 	def welcome (name)
@@ -64,6 +68,4 @@ class Account
 # 	checking.welcome("Emily")
 # 	checking.withdraw(4321, 10000)
 
-
-
-
+#
