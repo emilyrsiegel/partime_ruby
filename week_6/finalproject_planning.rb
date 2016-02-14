@@ -37,9 +37,9 @@ class Teen_Application
 			puts "Birthdate (mm/dd/yyyy)"
 			@birth_date = gets.chomp.to_i
 			puts "Gender: Female, Male, Choose Not To Identify"
-			@gender = gets.chomp
+			@gender = gets.chomp.capitalize
 			puts "Do you have a CPS ID? Y or N"
-			@cpsid = gets.chomp
+			@cpsid = gets.chomp.capitalize
 				if @cpsid == "Y"
 					puts "Enter your CPS ID (8 digits)"
 					cpsid_number = gets.chomp
@@ -60,16 +60,52 @@ class Teen_Application
 				ineligible 
 				end
 			puts "Do you live in Chicago? Y or N"
-			@live_chicago = gets.chomp
-				if @live_chicago == Y
+			@live_chicago = gets.chomp.capitalize
+				if @live_chicago == "Y"
+				search
 				else
 					ineligible
-
-
+				end
 		end
 
+def search
+	puts "Step 2: Find Programs. Use the search filters to narrow your search of programs. Would you like to search by Content Area, Model Type, or both?"
+		search_filter = gets.chomp
+			if search_filter == "Content Area"
+				puts "Are you interested in Arts, Science, Sports, Tech, or Communication?"
+				@content_area = gets.chomp
+				program_options
+			elsif search_filter == "Model Type"
+				puts "Would you like a Pre-Apprenticeship, Apprenticeship, Advanced-Apprenticeship, or Internship?"
+				@model_type = gets.chomp.capitalize
+				program_options
+			elsif search_filter == "Both"
+				puts "Are you interested in Arts, Science, Sports, Tech, or Communication?"
+				@content_area = gets.chomp.capitalize
+				puts "Would you like a Pre-Apprenticeship, Apprenticeship, Advanced-Apprenticeship, or Internship?"
+				@model_type = gets.chomp.capitalize
+				program_options
+			end
+		end
+
+
+def program_options
+	@gallery = ["Program Name: Advanced Culinary Arts", "Content Area: Arts", "Model Type: Advanced Apprenticeship", "Location: Bethlehem Lutheran Church"]
+	@sports = ["Program Name: Cricket @ Warren Park", "Content Area: Sports", "Model Type: Apprenticeship", "Location: Warren Park"]
+	@sports_cps = ["Program Name: Lifeguard @ Bogan High School", "Content Area: Apprenticeship", "Model Type: Apprenticeship", "Location: Bogan High School"]
+	@tech = ["Program Name: TechKno Camp", "Content Area: Tech", "Model Type: Apprenticeship", "Location: Legends South Development"]
+	@tech_advanced = ["Program Name: Advanced Video Production", "Content Area: Tech", "Model Type: Advanced Apprenticeship", "Location: Gallery37"]
+	@communications = ["Program Name: Marshall Debate", "Content Area: Communications", "Model Type: Apprenticeship", "Location: Marshall Metropolitan High School"]
+		if @gender == "Female" && @grade == 10
+		puts @gallery && @tech
+	else
+		puts "Sorry no program options for you!"
+	end
+end
+
+
 def ineligible
-	puts "You are not eligible for an After School Matters program"
+	puts "You are ineligible for an After School Matters program"
 	exit
 end 
 
