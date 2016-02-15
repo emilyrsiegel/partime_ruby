@@ -69,7 +69,7 @@ class Teen_Application
 		end
 
 def search
-	puts "Step 2: Find Programs. Use the search filters to narrow your search of programs. Would you like to search by Content Area, Model Type, or both?"
+	puts "Step 2: Find Programs. Use the search filters to narrow your search of programs. Would you like to search by Content Area, Model Type, or Both?"
 		search_filter = gets.chomp
 			if search_filter == "Content Area"
 				puts "Are you interested in Arts, Science, Sports, Tech, or Communication?"
@@ -83,7 +83,7 @@ def search
 				puts "Are you interested in Arts, Science, Sports, Tech, or Communication?"
 				@content_area = gets.chomp.capitalize
 				puts "Would you like a Pre-Apprenticeship, Apprenticeship, Advanced-Apprenticeship, or Internship?"
-				@model_type = gets.chomp.capitalize
+				@model_type = gets.chomp.capitalize, "\n"
 				program_options
 			end
 		end
@@ -96,10 +96,42 @@ def program_options
 	@tech = ["Program Name: TechKno Camp", "Content Area: Tech", "Model Type: Apprenticeship", "Location: Legends South Development"]
 	@tech_advanced = ["Program Name: Advanced Video Production", "Content Area: Tech", "Model Type: Advanced Apprenticeship", "Location: Gallery37"]
 	@communications = ["Program Name: Marshall Debate", "Content Area: Communications", "Model Type: Apprenticeship", "Location: Marshall Metropolitan High School"]
-		if @gender == "Female" && @grade == 10
-		puts @gallery && @tech
-	else
-		puts "Sorry no program options for you!"
+	puts "Please see below for your program options:", "\n"
+		if @content_area == "Arts"
+			puts @gallery
+		elsif @content_area == "Sports" && @model_type == "Apprenticeship" && @cpsschool != "Bogan High School"
+			puts @sports
+		elsif @content_area == "Sports" && @cpsschool == "Bogan High School"
+			puts @sports_cps, "\n"
+			puts @sports
+		elsif @model_type == "Apprenticeship" && @cpsschool == "Bogan High School"
+			puts @sports_cps, "\n"
+			puts @sports, "\n"
+			puts @tech,  "\n"
+		elsif @content_area == "Sports" && @cpsschool != "Bogan High School"
+			puts @sports
+		elsif @content_area == "Tech"
+			puts @tech, "\n"
+			puts @tech_advanced, "\n"	
+		elsif @content_area == "Tech" && @model_type == "Apprenticeship"
+			puts @tech
+		elsif @content_area == "Tech" && @model_type == "Advanced Apprenticeship"
+			puts @tech_advanced
+		elsif @content_area == "Communications" && @cpsschool == "Marshall High School"
+			puts @communications
+		elsif @model_type == "Apprenticeship" && @cpsschool !="Marshall High School" && @cpsschool !="Bogan High School"
+			puts @tech, "\n"
+			puts @sports, "\n"
+		elsif @model_type == "Apprenticeship" && @cpsschool == "Marshall High School"
+			puts @communications, "\n"
+			puts @tech, "\n"
+			puts @sports, "\n"
+		elsif @model_type == "Advanced Apprenticeship"
+			puts @tech_advanced, "\n"
+			puts @gallery, "\n"
+		else
+			puts "I'm sorry, there are no program options that you are eligible for and meet your search criteria. Please try your search again.", "\n"
+			search
 	end
 end
 
