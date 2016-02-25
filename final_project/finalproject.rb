@@ -66,7 +66,7 @@ class Teen_Application
 			else
 				ineligible
 			end
-		puts "Please enter your grade"
+		puts "Please enter your grade (9-12)"
 		@grade = gets.chomp.to_i
 			if @grade == 9 || @grade == 10 || @grade == 11 || @grade == 12
 			else
@@ -155,10 +155,12 @@ class Teen_Application
 		puts @tech, "\n"
 		puts @tech_advanced, "\n"
 		puts @communications, "\n"
-		puts "Enter Start to being your application"
+		puts "Enter Start to being your application or Return to return to an existing application."
 			browse_answer = gets.chomp.capitalize
 			if browse_answer == "Start"
 				enter_basic
+			elsif browse_answer == "Return"
+				existing_application	
 			else 
 				puts "Thank you for your interest in After School Matters!"
 			end
@@ -166,7 +168,7 @@ class Teen_Application
 
 
 	def ineligible
-		puts "You are ineligible for an After School Matters program"
+		puts "You are ineligible for an After School Matters program."
 		exit
 	end 
 
